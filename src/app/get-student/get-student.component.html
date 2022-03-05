@@ -1,0 +1,6 @@
+<p>get-student works!</p>
+<p *ngFor="let student of students">{{ student.name }}
+    <button (click)="editStudent(student.id)">edit</button>
+    <button (click)="deleteStudent(student.id)">delete</button>
+
+</p>
