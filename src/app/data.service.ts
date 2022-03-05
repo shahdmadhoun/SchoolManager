@@ -12,6 +12,9 @@ export class DataService {
     {id: 3,name: "ali", email: "ali@gmail.com", age: 25, gpa: 75},
   ];
 
+  searchOption=[]
+      //  postUrl : string = "https://jsonplaceholder.typicode.com/posts";
+
   constructor() { }
 
   public getStudents<Student>() {
