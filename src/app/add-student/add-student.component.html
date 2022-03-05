@@ -4,31 +4,36 @@
         <div class="row justify-content-center py-lg-5 py-md-4 py-3">
           <div class="form-container px-4 my-4">
               <h4 class="text-center pt-4">Add Student</h4>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label>Student Name</label>
-                <input type="text" class="form-control" placeholder="Student Name" ngModel name="name" #name required>
-              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                        <label>Student Name</label>
+                        <input type="text" class="form-control" placeholder="Student Name" ngModel name="name" #name required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="example@gmail.com" ngModel name="email" #email required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label>Age</label>
+                        <input type="number" class="form-control" placeholder="20" ngModel name="age" #age required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>GPA</label>
+                        <input type="number" class="form-control"  placeholder="90" ngModel name="gpa" #gpa required>
+                    </div>
+                </div>
+                <div>
+                    &nbsp;
+                    &nbsp;
+                </div>
+                <div class="form-row text-center">
+                    <div class="justify-content-center">
+                        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Add Store</button>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" class="form-control" placeholder="example@gmail.com" ngModel name="email" #email required>
-            </div>
-            <div class="form-group">
-                <label>Age</label>
-                <input type="number" class="form-control" placeholder="20" ngModel name="age" #age required>
-              </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label>GPA</label>
-                <input type="number" class="form-control"  placeholder="90" ngModel name="gpa" #gpa required>
-              </div>
-            </div>
-  
-            <div class="row justify-content-center">
-              <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Add Store</button>
-            </div>
-          </div>
         </div>
       </div>
     </form>
