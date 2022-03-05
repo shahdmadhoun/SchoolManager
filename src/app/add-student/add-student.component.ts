@@ -10,30 +10,26 @@ import { Student } from '../student';
 export class AddStudentComponent implements OnInit {
 
 
-  categories = [];
+  students: Student[]= [];
   @ViewChild('name') inputName: any;
   @ViewChild('email') inoutemail: any;
   @ViewChild('age') inputage: any;
   @ViewChild('gpa') inputgpa: any;
 
-  public student: Student = {
-    id: 6,
-    name: 'my name',
-    email: 'gmail@gmail.com',
-    age: 20,
-    gpa: 90
-  }
-
   selectChangeHandler (event: any) {
     this.inoutemail = event.target.value;
   }
-  constructor(public data: DataService) { }
+  constructor(public data: DataService) {
+    this.students = data.getStudents();
+   }
 
   ngOnInit(): void {
   }
 
   addStudent(student: Student){
-    this.student.id = this.data.students.length + 1;
+    student.id = this.students.length + 1;
+    console.log(student.id);
+
     this.data.addStudent(student)
     console.log(this.data.students);
 
