@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Student } from '../student';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-get-student',
@@ -9,8 +11,8 @@ import { Student } from '../student';
 })
 export class GetStudentComponent implements OnInit {
 
-  public students: Student[] = [];
-  constructor(public data: DataService) { }
+  students: Student[] = [];
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
     this.students = this.data.getStudents();

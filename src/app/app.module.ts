@@ -8,13 +8,16 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetStudentComponent } from './get-student/get-student.component';
 import { SearchComponent } from './search/search.component';
+import { FilterPipePipe } from './filter-pipe.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
     GetStudentComponent,
-    SearchComponent
+    SearchComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,
