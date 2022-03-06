@@ -14,7 +14,6 @@ export class GetStudentComponent implements OnInit {
 
   students: Student[] = [];
   searchText = '';
-
   closeResult: string = '';
   name:string = ''
   email:string = ''
