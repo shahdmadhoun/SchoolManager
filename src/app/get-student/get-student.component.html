@@ -21,7 +21,57 @@
     <td>{{student.age}}</td>
     <td>{{student.gpa}}</td>
     <td>    
-        <button class="btn btn-outline-danger" (click)="editStudent(student.id)">edit</button>
+    <button class="btn btn-outline-danger" (click)="open(mymodal, student.id)">edit</button>
+    <ng-template #mymodal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Edit Student</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #f="ngForm" >
+          <div class="container">
+            <div class="row justify-content-center py-lg-5">
+              <div class="form-container">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                            <label>Student Name</label>
+                            <input type="text" class="form-control" value="student" placeholder="Student Name" [(ngModel)]="name" name="name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="example@gmail.com" [(ngModel)]="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Age</label>
+                            <input type="number" class="form-control" placeholder="20" [(ngModel)]="age" name="age" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>GPA</label>
+                            <input type="number" class="form-control"  placeholder="90" [(ngModel)]="gpa" name="gpa" required>
+                        </div>
+                    </div>
+                    <div>
+                        &nbsp;
+                        &nbsp;
+                    </div>
+                    <div class="form-row text-center">
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" (click)="editStudent(student.id)">Ok</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+        
+        
+        
     </td>
     <td>        
         <button class="btn btn-danger" (click)="deleteStudent(student.id)">delete</button>
@@ -29,6 +79,8 @@
   </tr>
   </tbody>
 </table>
+   
+
 
 <router-outlet></router-outlet>
 
