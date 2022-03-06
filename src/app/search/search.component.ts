@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  students: Student[] = [];
+  searchText = '';
+
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.students = this.data.getStudents();
+    console.log(this.students)
   }
 
 }

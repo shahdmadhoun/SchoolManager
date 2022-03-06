@@ -1,4 +1,13 @@
-<app-search></app-search>
+<!-- <app-search></app-search> -->
+
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="  Start searching for a Student by id or name or email">
+    </div>
+  </div>
+</div>
+
 
 <table class="table table-striped">
   <thead>
@@ -14,7 +23,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let student of students">
+  <tr *ngFor="let student of students | filter:searchText">
     <th scope="row">{{ student.id }}</th>
     <td>{{student.name}}</td>
     <td>{{student.email}}</td>

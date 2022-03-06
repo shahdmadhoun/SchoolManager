@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { FilterPipePipe } from './filter-pipe.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
