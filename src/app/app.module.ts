@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetStudentComponent } from './get-student/get-student.component';
 import { SearchComponent } from './search/search.component';
 import { FilterPipePipe } from './filter-pipe.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FilterPipePipe } from './filter-pipe.pipe';
     AddStudentComponent,
     GetStudentComponent,
     SearchComponent,
-    FilterPipePipe
+    FilterPipePipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@
     <td>{{student.age}}</td>
     <td>{{student.gpa}}</td>
     <td>    
-    <button class="btn btn-outline-danger" (click)="open(mymodalEdit, student.id)">edit</button>
+    <button class="btn btn-danger" (click)="open(mymodalEdit, student.id)">edit</button>
     <ng-template #mymodalEdit let-modal>
       <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Edit Student</h4>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-row text-center">
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-dark" (click)="editStudent(student.id)">Ok</button>
+                        <button type="button" class="btn btn-outline-dark" (click)="editStudent(student.id)">Edit</button>
                       </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
     </ng-template>
     </td>
     <td>        
-      <button class="btn btn-danger" (click)="openDelete(mymodalDelete)">delete</button>
+      <button class="btn btn-outline-danger" (click)="openDelete(mymodalDelete)">delete</button>
       <ng-template #mymodalDelete let-modal>
         <div class="modal-header">
           <h4 class="modal-title" id="modal-basic-title">Delete Student!</h4>
